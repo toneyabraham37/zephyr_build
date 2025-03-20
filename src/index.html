@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(90deg, #1e1e1e, #333);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+            /* Push content below the fixed header */
+        }
+
+        button {
+            border: none;
+            outline: none;
+            border-radius: 25px;
+            width: 120px;
+            padding: 10px 16px;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(90deg, #d32f2f, #b71c1c);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(183, 28, 28, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #b71c1c, #d32f2f);
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(183, 28, 28, 0.5);
+        }
+    </style> -->
+</head>
+
+<body>
+    <h2>MCHP Zephyr Build</h2>
+    <div class="container">
+        <label for="boardname">Enter Board Name</label><br>
+        <input type="text" id="boardname" aria-label="Enter board name"><br>
+        <button onclick="runBuild()">Build</button>
+    </div>
+
+    <script>
+        const vscode = acquireVsCodeApi();
+        function runBuild() {
+            vscode.postMessage({ command: "runBuild" });
+        }
+    </script>
+</body>
+
+</html>
